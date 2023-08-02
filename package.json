@@ -5,6 +5,10 @@
   "main": "index.ts",
   "scripts": {
     "build": "rimraf ./build && tsc",
+    "command:delete:global": "npm run build && DEPLOY_OR_DELETE=DELETE GLOBAL_OR_GUILD=GLOBAL node build/requests/deploy-commands.js",
+    "command:delete:guild": "npm run build && DEPLOY_OR_DELETE=DELETE GLOBAL_OR_GUILD=GUILD node build/requests/deploy-commands.js",
+    "command:deploy:global": "npm run build && DEPLOY_OR_DELETE=DEPLOY GLOBAL_OR_GUILD=GLOBAL node build/requests/deploy-commands.js",
+    "command:deploy:guild": "npm run build && node DEPLOY_OR_DELETE=DEPLOY GLOBAL_OR_GUILD=GUILD build/requests/deploy-commands.js",
     "start": "npm run build && node build/index.js",
     "start:dev": "npx nodemon",
     "test": "test"
