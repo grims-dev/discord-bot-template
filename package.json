@@ -1,0 +1,22 @@
+{
+  "name": "discord-bot-template",
+  "version": "1.0.0",
+  "description": "Skeleton repo for getting started with a Typescript Discord bot",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grims-dev/discord-bot-template.git"
+  },
+  "author": "grims-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grims-dev/discord-bot-template/issues"
+  },
+  "homepage": "https://github.com/grims-dev/discord-bot-template#readme",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
