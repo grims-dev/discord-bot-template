@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { REST, Routes } from 'discord.js';
-import { commandsJSON } from '../utils';
+import { commandsJSON } from '../utils/discord';
 
 async function deployCommands() {
     const {

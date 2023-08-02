@@ -1,6 +1,6 @@
 import 'dotenv/config';
-import { Client, GatewayIntentBits, Events, BaseInteraction } from 'discord.js';
-import { events } from './utils';
+import { Client, GatewayIntentBits } from 'discord.js';
+import { events } from './utils/discord';
 
 const init = () => {
     console.log('Initialising the bot...');

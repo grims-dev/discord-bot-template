@@ -1,6 +1,6 @@
 import { BaseInteraction, Events } from 'discord.js';
 import { IEvent } from '../types';
-import { commands } from '../utils';
+import { commands } from '../utils/discord';
 
 const event: IEvent = {
     name: Events.InteractionCreate,

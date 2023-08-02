@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { Collection, RESTPostAPIChatInputApplicationCommandsJSONBody } from 'discord.js';
-import { ICommand, IEvent } from './types';
+import { ICommand, IEvent } from '../types';
 
 // for storing commands within the bot
 const getCommands = (): Collection<string, ICommand> => {
