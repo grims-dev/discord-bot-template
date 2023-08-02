@@ -4,7 +4,7 @@ import { Collection, RESTPostAPIChatInputApplicationCommandsJSONBody } from 'dis
 import { ICommand, IEvent } from './types';
 
 // for storing commands within the bot
-export const getCommands = (): Collection<string, ICommand> => {
+const getCommands = (): Collection<string, ICommand> => {
     const commands = new Collection<string, ICommand>();
     const foldersPath = path.join(__dirname, 'commands');
     const commandFolders = fs.readdirSync(foldersPath);
@@ -22,9 +22,10 @@ export const getCommands = (): Collection<string, ICommand> => {
 
     return commands;
 }
+export const commands = getCommands();
 
 // for collecting as array of JSON payloads for uploading to Discord API
-export const getCommandsJSON = (): RESTPostAPIChatInputApplicationCommandsJSONBody[] => {
+const getCommandsJSON = (): RESTPostAPIChatInputApplicationCommandsJSONBody[] => {
     const commands: RESTPostAPIChatInputApplicationCommandsJSONBody[] = [];
     const foldersPath = path.join(__dirname, 'commands');
     const commandFolders = fs.readdirSync(foldersPath);
@@ -42,8 +43,9 @@ export const getCommandsJSON = (): RESTPostAPIChatInputApplicationCommandsJSONBo
 
     return commands;
 }
+export const commandsJSON = getCommandsJSON();
 
-export const getEvents = (): IEvent[] => {
+const getEvents = (): IEvent[] => {
     const events: IEvent[] = [];
     const eventsPath = path.join(__dirname, 'events');
     const eventFiles = fs.readdirSync(eventsPath).filter(file => file.endsWith('.ts'));
@@ -56,3 +58,4 @@ export const getEvents = (): IEvent[] => {
 
     return events;
 }
+export const events = getEvents();
