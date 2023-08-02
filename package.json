@@ -18,5 +18,8 @@
   "homepage": "https://github.com/grims-dev/discord-bot-template#readme",
   "devDependencies": {
     "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "discord.js": "^14.12.1"
   }
 }
