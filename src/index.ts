@@ -20,6 +20,8 @@ const init = () => {
     });
 
     client.login(token);
+
+    console.log('Initialisation complete');
 };
 
 init();
